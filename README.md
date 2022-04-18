@@ -1,70 +1,20 @@
-# Getting Started with Create React App
+# OMDB Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This simple app takes a user input search and returns a result from the Open Movie Database.
 
-## Available Scripts
+# Approach
+- First, defined the problem: we need to implement an application which takes user input and returns a result from an API call.
+- Before coding, wrote down what tests I will implement to make this application work as intended.
+Tests include
+  1: Testing the API and making sure it returns the expected data, or error if there is one
+  2: Making sure the app renders correctly
 
-In the project directory, you can run:
+# Writing the code
+- Implemented basic react component boilerplate structure to take input and display search results.
+- Implemented an API service file which we call when the user searches for a movie title
+- Implemented styling using the styled components library. This technology is new to me, but I can already see how useful it is proving to be even from this simple implementation
+- Transcribed the tests I had thought of already into code, and made sure the app worked as intended.
 
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# How I would improve this app
+- If I refactored this, I would first start out by implementing the tests I had come up with before writing any code. In this case, I first wanted to become aquainted with the new styling library before I wrote tests using the testing library, as I thought that using styled components may change the way I am used to writing my tests.
+- If I spent a lot of time on this app, I would refactor the styling to be more fun. I had an idea of a 'magic 8 ball' / 'crystal ball' theme for the application which I think would be fun, but given the short amount of time spent on this application I decided to keep it very simple!
