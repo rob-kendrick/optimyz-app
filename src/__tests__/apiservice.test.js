@@ -1,40 +1,41 @@
+import apiService from '../services/apiservice.ts';
 
 const mockResult = {
-  "Title": "Monsters, Inc.",
-  "Year": "2001",
-  "Rated": "G",
-  "Released": "02 Nov 2001",
-  "Runtime": "92 min",
-  "Genre": "Animation, Adventure, Comedy",
-  "Director": "Pete Docter, David Silverman, Lee Unkrich",
-  "Writer": "Pete Docter, Jill Culton, Jeff Pidgeon",
-  "Actors": "Billy Crystal, John Goodman, Mary Gibbs",
-  "Plot": "In order to power the city, monsters have to scare children so that they scream. However, the children are toxic to the monsters, and after a child gets through, two monsters realize things may not be what they think.",
-  "Language": "English",
-  "Country": "United States",
-  "Awards": "Won 1 Oscar. 15 wins & 38 nominations total",
-  "Poster": "https://m.media-amazon.com/images/M/MV5BMTY1NTI0ODUyOF5BMl5BanBnXkFtZTgwNTEyNjQ0MDE@._V1_SX300.jpg",
+  "Title": "Inception",
+  "Year": "2010",
+  "Rated": "PG-13",
+  "Released": "16 Jul 2010",
+  "Runtime": "148 min",
+  "Genre": "Action, Adventure, Sci-Fi",
+  "Director": "Christopher Nolan",
+  "Writer": "Christopher Nolan",
+  "Actors": "Leonardo DiCaprio, Joseph Gordon-Levitt, Elliot Page",
+  "Plot": "A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O., but his tragic past may doom the project and his team to disaster.",
+  "Language": "English, Japanese, French",
+  "Country": "United States, United Kingdom",
+  "Awards": "Won 4 Oscars. 157 wins & 220 nominations total",
+  "Poster": "https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_SX300.jpg",
   "Ratings": [
       {
           "Source": "Internet Movie Database",
-          "Value": "8.1/10"
+          "Value": "8.8/10"
       },
       {
           "Source": "Rotten Tomatoes",
-          "Value": "96%"
+          "Value": "87%"
       },
       {
           "Source": "Metacritic",
-          "Value": "79/100"
+          "Value": "74/100"
       }
   ],
-  "Metascore": "79",
-  "imdbRating": "8.1",
-  "imdbVotes": "879,470",
-  "imdbID": "tt0198781",
+  "Metascore": "74",
+  "imdbRating": "8.8",
+  "imdbVotes": "2,251,332",
+  "imdbID": "tt1375666",
   "Type": "movie",
-  "DVD": "17 Sep 2002",
-  "BoxOffice": "$290,642,256",
+  "DVD": "07 Dec 2010",
+  "BoxOffice": "$292,587,330",
   "Production": "N/A",
   "Website": "N/A",
   "Response": "True"
@@ -44,12 +45,8 @@ const mockResult = {
 describe('API Fetching', () => {
 
   it('can fetch data successfully', async() => {
+    const result = await apiService.getByTitle('inception')
+    expect(result).toEqual(mockResult)
 
-    const response = await fetch('http://www.omdbapi.com/?apikey=5181cd60&t=inception')
-    const result = response.json()
-    .then(res => {
-      exexpect(res).toEqual(mockResult);
-    })
-    .catch(e => e)
   });
 });

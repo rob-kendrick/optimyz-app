@@ -15,18 +15,5 @@ const apiService = {
     .catch(handleError)
 }
 
-export async function getByTitles(title:string) {
-  await fetch(`${baseUrl}&t=${title}`)
-  .then((response) => {
-    if(response.status < 300) {
-
-      const result = response.json();
-      console.log(result)
-      return result;
-    }
-    throw new Error('Server Error')
-  })
-  .catch(handleError)
-}
 
 export default apiService;
