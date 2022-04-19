@@ -1,6 +1,6 @@
 //@ts-nocheck
 import React from 'react'
-import apiService from '../API/apiservice.ts';
+import apiService from '../services/apiservice.ts';
 import { FlexContainer, StyledTextInput, StyledButton } from '../Styles/Form.Styled.ts'
 
 function SearchInput({userInput, setUserInput, searchResult, setSearchResult}) {
